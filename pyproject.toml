@@ -61,7 +61,8 @@ provision-virtual = [
     ]
 provision-container = []
 report-junit = [
-    "junit_xml>=1.9",
+    # Required to support XML parsing and checking the XSD schemas.
+    "lxml>=4.9.0",
     ]
 report-polarion = [
     "tmt[report-junit]",
@@ -216,7 +217,7 @@ module = [
     "guestfs.*",
     "html2text.*",
     "fmf.*",
-    "junit_xml.*",
+    "lxml.*",
     "libvirt.*",
     "nitrate.*",
     "pylero.*",
